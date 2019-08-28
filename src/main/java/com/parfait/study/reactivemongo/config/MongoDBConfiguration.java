@@ -19,19 +19,6 @@ public class MongoDBConfiguration {
 		};
 	}
 
-//	@Bean
-//	@ConditionalOnMissingBean(MongoConverter.class)
-//	public MappingMongoConverter mappingMongoConverter(MongoMappingContext context,
-//													   MongoCustomConversions conversions,
-//													   ConverterRegistry converterRegistry) {
-//		MappingMongoConverter mappingConverter = new MappingMongoConverter(NoOpDbRefResolver.INSTANCE, context);
-//
-//		converterRegistry.addConverter(postBodyConverter());
-//		conversions.registerConvertersIn(converterRegiste);
-//		mappingConverter.setCustomConversions(conversions);
-//		return mappingConverter;
-//	}
-
 	@Bean
 	public PostBodyConverter postBodyConverter() {
 		return new PostBodyConverter();
